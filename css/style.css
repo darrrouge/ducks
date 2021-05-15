@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@-webkit-keyframes duckfly {
+  0% {
+    left: -55px;
+    top: 59vh;
+  }
+  50% {
+    left: 45%;
+    top: 60vh;
+  }
+  100% {
+    left: 100%;
+    top: 32vh;
+  }
+}
+
+@keyframes duckfly {
+  0% {
+    left: -55px;
+    top: 59vh;
+  }
+  50% {
+    left: 45%;
+    top: 60vh;
+  }
+  100% {
+    left: 100%;
+    top: 32vh;
+  }
+}
+
+@-webkit-keyframes duckfly2 {
+  0% {
+    left: -55px;
+    top: 42vh;
+  }
+  50% {
+    left: 45%;
+    top: 15vh;
+  }
+  100% {
+    left: 100%;
+    top: 64vh;
+  }
+}
+
+@keyframes duckfly2 {
+  0% {
+    left: -55px;
+    top: 42vh;
+  }
+  50% {
+    left: 45%;
+    top: 15vh;
+  }
+  100% {
+    left: 100%;
+    top: 64vh;
+  }
+}
+
+@-webkit-keyframes duckfly3 {
+  0% {
+    left: -55px;
+    top: 11vh;
+  }
+  50% {
+    left: 45%;
+    top: 26vh;
+  }
+  100% {
+    left: 100%;
+    top: 43vh;
+  }
+}
+
+@keyframes duckfly3 {
+  0% {
+    left: -55px;
+    top: 11vh;
+  }
+  50% {
+    left: 45%;
+    top: 26vh;
+  }
+  100% {
+    left: 100%;
+    top: 43vh;
+  }
+}
+
+body {
+  counter-reset: count;
+  background-image: url(https://i.ytimg.com/vi/i9R8MqilMW8/maxresdefault.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  height: 100vh;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -99999999px;
+  visibility: hidden;
+}
+
+h1 {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
+input[type="checkbox"]:checked {
+  counter-increment: count;
+}
+
+input[type="checkbox"]:checked + label {
+  display: none;
+}
+
+h1::after {
+  content: counter(count);
+}
+
+img {
+  width: 50px;
+}
+
+label {
+  position: absolute;
+}
+
+.duck1 {
+  -webkit-animation: duckfly 5s linear 0s 1 normal both;
+          animation: duckfly 5s linear 0s 1 normal both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.duck2 {
+  -webkit-animation: duckfly2 5s linear 2s 1 normal both;
+          animation: duckfly2 5s linear 2s 1 normal both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.duck3 {
+  -webkit-animation: duckfly3 5s linear 4s 1 normal both;
+          animation: duckfly3 5s linear 4s 1 normal both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+/*# sourceMappingURL=style.css.map */
